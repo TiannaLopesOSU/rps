@@ -1,25 +1,37 @@
 [
   {
-    "id": 0,
+    "id": 1,
     "title": "Step 1",
+    "instruction": "In this lab, there is a challenge part to earn extra credits. For students who have decided to implement the challenge part, you can just submit the challenge code to Canvas. Challenge code will replace the requirement of source code.",
+    "content": []
+  },
+  {
+    "id": 2,
+    "title": "Step 2",
+    "instruction": "In this project you will be designing a system to battle of rock paper scissors between two ECE375 boards. We will use the LCD screen on our board to prompt messages (i.e., ready, start, result, etc.) and choices of your hangs (i.e., rock, paper, scissors). For a smooth process, we will use the 4 LEDs, which are connected to PB4-7, as a countdown timer",
+    "content": []
+  },
+  {
+    "id": 3,
+    "title": "Step 3",
     "instruction": "When the CPU first boots, the LCD should show the following content to the user.This content will remain indefinitely until the user presses the button which is connected to Port D, pin 7.",
     "content": ["Welcome!", "Please press PD7"]
   },
   {
-    "id": 1,
-    "title": "Step 2",
+    "id": 4,
+    "title": "Step 4",
     "instruction": "After the button is pressed, the user's board should transmit a ready signal to the opponent so that it knows the user is ready. Additionally, this information will be displayed on the user's screen. This content will remain indefinitely until the opponent player presses the PD7 on their board and sends a ready signal to the user's board. ",
     "content": ["Ready. Waiting for opponent"]
   },
   {
-    "id": 2,
-    "title": "Step 3",
+    "id": 5,
+    "title": "Step 5",
     "instruction": "When the user's board transmits/ receives the ready signal to/from the opponent, both the user and the opponent's 4 LEDs are on the start counting down by turning off one by one at each 1.5-second. Simultaneously, their screens will also display:",
     "content": ["Game start"]
   },
   {
-    "id": 3,
-    "title": "Step 4",
+    "id": 6,
+    "title": "Step 6",
     "instruction": "The second line of the LCD is where the user is abel to select the choice among three gestures (i.e., rock, paper and scissors) that they want to send.",
     "listItems": [
       "First pressing PD4 selects the Rock gesture.",
@@ -29,56 +41,56 @@
     "content": []
   },
   {
-    "id": 4,
-    "title": "Step 5",
+    "id": 7,
+    "title": "Step 7",
     "instruction": "If the display currently shows:",
     "content": ["Game Start"]
   },
   {
-    "id": 6,
-    "title": "Step 6",
+    "id": 8,
+    "title": "Step 8",
     "instruction": "Then pressing PD4 will immediately update the screen to display:",
     "content": ["Game Start", "Rock"]
   },
   {
-    "id": 7,
-    "title": "Step 7",
+    "id": 9,
+    "title": "Step 9",
     "instruction": "Pressing PD4 again will display:",
     "content": ["Game Start", "Paper"]
   },
   {
-    "id": 8,
-    "title": "Step 8",
-    "instruction": "At this point, the opponent's play should not appear in the user's board even if it receives the opponent's signals. After 4 LEDs are off, which means 6 seconds timer is done, the final choice of the opponent's gesture and the user's will be displayed in the first line and the second line of the LCD respectively. For example, if the opponent's gesture is scissor and the user's one is paper, the user's LCD will display:",
-    "content": ["Scissor", "Paper"]
-  },
-  {
-    "id": 9,
-    "title": "Step 9",
-    "instruction": "Meanwhile the opponent's LCD will display:",
-    "content": ["Paper", "Scissor"]
-  },
-  {
     "id": 10,
     "title": "Step 10",
-    "instruction": "Simultaneously, 4 LEDs on both boards will turn on in order to start counting down for the 6 seconds delay. After timeout, the outcome will be displayed on the first line of the screens and start a new timer. For example: the user's LCD will display:",
-    "content": ["You lost", "Paper"]
+    "instruction": "At this point, the opponent's play should not appear in the user's board even if it receives the opponent's signals. After 4 LEDs are off, which means 6 seconds timer is done, the final choice of the opponent's gesture and the user's will be displayed in the first line and the second line of the LCD respectively. For example, if the opponent's gesture is scissor and the user's one is paper, the user's LCD will display:",
+    "content": ["Scissor", "Paper"]
   },
   {
     "id": 11,
     "title": "Step 11",
     "instruction": "Meanwhile the opponent's LCD will display:",
-    "content": ["You won!", "Scissor"]
+    "content": ["Paper", "Scissor"]
   },
   {
     "id": 12,
     "title": "Step 12",
-    "instruction": "If both players have chosen the same gesture the first line should be updated with a draw message.",
-    "content": ["Draw"]
+    "instruction": "Simultaneously, 4 LEDs on both boards will turn on in order to start counting down for the 6 seconds delay. After timeout, the outcome will be displayed on the first line of the screens and start a new timer. For example: the user's LCD will display:",
+    "content": ["You lost", "Paper"]
   },
   {
     "id": 13,
     "title": "Step 13",
+    "instruction": "Meanwhile the opponent's LCD will display:",
+    "content": ["You won!", "Scissor"]
+  },
+  {
+    "id": 14,
+    "title": "Step 14",
+    "instruction": "If both players have chosen the same gesture the first line should be updated with a draw message.",
+    "content": ["Draw"]
+  },
+  {
+    "id": 15,
+    "title": "Step 15",
     "instruction": "After the new timer is done, the code will return to the prompt as shown. The user can now enter another game round, exactly as before.",
     "content": ["Welcome!", "Please press PD7"]
   }
