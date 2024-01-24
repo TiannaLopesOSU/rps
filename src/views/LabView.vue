@@ -96,7 +96,7 @@
     </div>
     <div v-else>
       <div class="body mt-2 border border-2 rounded">
-        <div class="m-4">
+        <div class="m-2">
           <div class="course rounded m-1 card">
             <div class="card-header">
               <div
@@ -105,7 +105,7 @@
                 SECTION OVERVIEW
               </div>
             </div>
-            <div class="fw-bold">Complete the following objectives:</div>
+            <div class="fw-bold m-2">Complete the following objectives:</div>
             <div>
               <ul>
                 <li>
@@ -128,47 +128,49 @@
             </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col-4">
-            <div class="card m-2 course">
-              <div class="card-header">
-                <div
-                  class="textbook-color fs-5 fw-bold d-flex justify-content-center"
-                >
-                  IMPLEMENTATION
-                </div>
+        <div class="">
+          <!-- Implementation -->
+          <div class="card m-2 course">
+            <div class="card-header">
+              <div
+                class="textbook-color fs-5 fw-bold d-flex justify-content-center"
+              >
+                IMPLEMENTATION
               </div>
-              <div class="card-body">
-                <div v-for="step in instructionStepList" :key="step.id">
-                  <!-- <div>{{ step.title }}</div> -->
-                  <div v-if="step.id === currentStepIndex">
-                    <div>{{ step.instruction }}</div>
-                    <div
-                      v-if="step.content.length > 0"
-                      class="border rounded p-1 m-1"
-                    >
-                      <div v-for="(view, index) in step.content" :key="index">
-                        <div class="text-red">{{ view }}</div>
-                      </div>
+            </div>
+            <div class="card-body">
+              <div v-for="step in instructionStepList" :key="step.id">
+                <!-- <div>{{ step.title }}</div> -->
+                <div v-if="step.id === currentStepIndex">
+                  <div>{{ step.instruction }}</div>
+                  <div
+                    v-if="step.content.length > 0"
+                    class="border rounded p-1 m-1"
+                  >
+                    <div v-for="(view, index) in step.content" :key="index">
+                      <div class="text-red">{{ view }}</div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="card-footer text-end">
-                <div
-                  v-if="this.currentStepIndex < this.instructionStepList.length"
-                >
-                  <button class="btn btn-primary" @click="nextStepId">
-                    Next
-                  </button>
-                </div>
-                <div v-else>
-                  <button class="btn btn-secondary">Steps complete!</button>
-                </div>
+            </div>
+            <div class="card-footer text-end">
+              <div
+                v-if="this.currentStepIndex < this.instructionStepList.length"
+              >
+                <button class="btn btn-primary" @click="nextStepId">
+                  Next
+                </button>
+              </div>
+              <div v-else>
+                <button class="btn btn-secondary">Steps complete!</button>
               </div>
             </div>
           </div>
-          <div class="col-8">
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <!-- Board  -->
             <div class="card m-2 course">
               <div class="card-header">
                 <div
@@ -180,7 +182,10 @@
               <div class="card-body"><Board /></div>
               <div class="card-footer"></div>
             </div>
-            <div class="card m-2">
+          </div>
+          <div class="col-6">
+            <!-- Starter code -->
+            <div class="card m-2 course">
               <div class="card-header">
                 <div
                   class="textbook-color fs-5 fw-bold d-flex justify-content-center"
